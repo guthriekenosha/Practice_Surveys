@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div class="Container">
+        <form action="/create_user" method="POST">
+            {% csrf_token %}
+            <h1 class="mb-3 mt-4">Create Survey</h1>
+            <div class="row">
+                <label for="Your_Name" class="form-label col-sn-2">Your Name</label>
+                <input type="text" class="form-control col-sn-4" name="your_name">
+            </div>
+
+            <div class="row">
+                <label for="Language" class="form-label col-sn-2">Favorite Language</label>
+                <select name='Language'>
+                    <option value="python">Python</option>
+                    <option value="c#">C#</option>
+                    <option value="java">Java</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label for="Location" class="form-label col-sn-2">Dojo Location</label>
+                <select name='Location'>
+                    <option value="chicago">Chicago</option>
+                    <option value="dallas">Dallas</option>
+                    <option value="atlants">Atlanta</option>
+                </select>
+            </div>
+            <br>
+
+            <div class="row">
+                <label for="Comment">Comments(Optional)</label>
+                <textarea id="" cols="30" rows="10"></textarea>
+
+            </div>
+            <button class="btn btn-bigger col-sn-4 mt-4">Submit</button>
+
+        </form>
+    </div>
+</body>
+</html>
